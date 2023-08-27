@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <link rel="stylesheet" href="cm,inches converter.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+</head>
+<body>
+    <div id="head">
+        <h1><b>cm to inches</b></h1>
+        <div id="insidebox">
+            <input type="text" id="input" placeholder="length in cm">
+        </div>
+        <div id="button">
+            <button class="btn btn-primary" type="submit" onclick="convert()">Convert to inches</button>
+        </div>
+        <div id="result">
+
+        </div>
+        <h1><b>inches to cm</b></u></h1>
+        <div id="insidebox">
+            <input type="text" id="input1" placeholder="length in inches">
+        </div>
+        <div id="button">
+            <button class="btn btn-primary" type="submit" onclick="convert1()">Convert to cm</button>
+        </div>
+        <div id="result1">
+
+        </div>
+    </div>
+    <script>
+        function convert(){
+           let cm=Number(document.getElementById("input").value)
+           let inches=cm/2.54
+           let result=document.getElementById("result")
+            result.innerHTML=inches+" inches"
+        }
+        function convert1(){
+           let inches1=Number(document.getElementById("input1").value)
+           let cm1=inches1*2.54
+           let result1=document.getElementById("result1")
+            result1.innerHTML=cm1+" cm"
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+</body>
+</html>
